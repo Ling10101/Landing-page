@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Halal Food Festival</title>
+ 
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Join us at the World Halal Food Festival 2024 to indulge in a vibrant celebration of halal cuisine! Discover a diverse range of flavours, engage in exciting workshops, and connect with food enthusiasts from around the world. Experience cultural performances, cooking demonstrations, and much more in a family-friendly atmosphere. Don't miss this chance to celebrate halal food and culture!">
+    <meta name="keywords"
+        content="Halal food festival, food festival, halal asian food, halal burgers, halal chinese, halal noodles, desserts, halal Korean, kebabs, food festival london, cookery theatre, international halal food, cultural event, live entertainment, family-friendly, kids zone, halal, halal restaurants">
+    <meta name="author" content="World Halal Food Festival Official">
+    <meta name="robots" content="index, follow">
+ 
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="World Halal Food Festival 2024 - Official Website">
+    <meta property="og:description"
+        content="Dive into a world of flavours at the World Halal Food Festival 2024! Enjoy a diverse array of halal dishes, exciting cooking theatre, cultural performances, and much more. Join us for a memorable celebration of halal food and culture!">
+    <meta property="og:image" content="https://www.tomorrowland.com/assets/images/tomorrowland-2024-banner.jpg">
+    <meta property="og:url" content="https://www.tomorrowland.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tomorrowland Official">
+    <meta property="og:locale" content="en_US">
+ 
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tomorrowland Festival 2024 - Official Website">
+    <meta name="twitter:description"
+        content="Don't miss Tomorrowland 2024! The ultimate electronic music festival experience. Tickets available now.">
+    <meta name="twitter:image" content="https://www.tomorrowland.com/assets/images/tomorrowland-2024-banner.jpg">
+    <meta name="twitter:site" content="@Tomorrowland">
+    <meta name="twitter:creator" content="@Tomorrowland">
+ 
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+ 
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./images/logo-simple.webp" alt="World Halal festival logo" height="40px
+                ">
+            </div>
+            <div class="menu">
+                <a href="#section1">Home</a>
+                <a href="#section2">About</a>
+                <a href="#section3">Services</a>
+                <a href="#section4">Contact</a>
+            </div>
+            <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#section1" onclick="closeMenu()">Home</a>
+            <a href="#section2" onclick="closeMenu()">About</a>
+            <a href="#section3" onclick="closeMenu()">Services</a>
+            <a href="#section4" onclick="closeMenu()">Contact</a>
+        </div>
+    </header>
+ 
+    <!-- Hero Section -->
+    <section id="hero">
+        <img src="./images/hero-2.webp" alt="World halal food festival" class="hero-image">
+        <div class="hero-text">
+            <h1><img src="./images/logo.webp" alt="world halal food festival logo" class="hero-image-logo"></h1>
+            <button class="cta-button">Buy Tickets</button>
+        </div>
+    </section>
+ 
+    <!-- Sections with Anchor links  -->
+    <section id="section1">
+        <h2>About the Festival</h2>
+    <br>
+        <p>The World Halal Food Festival is an annual event celebrating the rich diversity of halal cuisine and culture in London. Featuring over 150 vendors offering halal dishes from around the world, the festival also includes a <strong>Live Cookery Theatre, VIP Lounge, Kids Zone,</strong>  and a <strong>Live Stage</strong> with performances and entertainment. Open to all, it's a welcoming space where food lovers can explore new flavours, enjoy live experiences, and connect with the community. Join us for a weekend of delicious food, family fun, and cultural discovery!</p>
+<br>
+        <h3>28th - 29th September 2024</h3>
+        <br>
+
+        <h3>London Stadium, Queen Elizabeth Olympic Park, E20</h3>
+        <br>
+
+         <!-- __START OF CAROUSEL__ -->
+    <div class="carousel-container">
+        <!-- Image slides -->
+        <div class="carousel-slide">
+            <img src="./images/burger-carousel.webp" alt="Halal burgers">
+            <img src="./images/doughnuts-carousel.webp" alt="halal doughnuts">
+            <img src="./images/drink-carousel.webp" alt="Mocktails">
+        </div>
+ 
+        <!-- Left and right arrows -->
+        <div class="carousel-navigation">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+ 
+        <!-- Bullet points indicators -->
+        <div class="carousel-bullets">
+            <span class="bullet"></span>
+            <span class="bullet"></span>
+            <span class="bullet"></span>
+        </div>
+    </div>
+ 
+    <!-- External JS file for the carousel -->
+
+    <script src="./script-carousel.js"></script>
+    <!-- __END OF CAROUSEL__ -->
+    </section>
+ 
+    <section id="section2">
+        <h2>Things to do</h2>
+
+        <div class="web-cards">
+            <!-- card  -->
+            <div class="card">
+                <img src="./images/activities-cookery.webp" alt="Live cookery theatre">
+
+                <div class="info">
+                    <h3>Cookery Theatre</h3>
+                    <p>Watch top chefs in action at the Cookery Theatre! Learn tips, tricks, and delicious recipes during live cooking demonstration.</p>
+                    <button type="button" class="cta-button" onclick="alert ('card clicked')">Read More</button>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="./images/activities-entertainment.webp" alt="live entertainment">
+
+                <div class="info">
+                    <h3>Live Entertainment</h3>
+                    <p>Enjoy live performances, music, and cultural shows that will keep you entertained throughout the day.</p>
+                    <button type="button" class="cta-button" onclick="alert ('card clicked')">Read More</button>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="./images/activities-facepaint.webp" alt="kids zone">
+
+                <div class="info">
+                    <h3>Kids Zone</h3>
+                    <p> With interactive activities and plenty to explore, the Kids Zone promises a day of excitement for our younger visitors.</p>
+                    <button type="button" class="cta-button" onclick="alert ('card clicked')">Read More</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+ 
+    
+    <!-- video  -->
+     <div class="video-container">
+         <div class="video-wrapper"> <iframe width="560" height="315" src="https://www.youtube.com/embed/BGtBN844qGM?si=m8fwcstDxQ0_sOxZ&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         </div>
+
+     </div>
+     
+     
+    
+    <section id="section3" class="contact a">
+        
+        <a href="https://www.worldhalalfoodfestival.com/contact"> Contact Us </a>
+
+    </section>
+
+    <section>
+
+        <!-- parent div  -->
+         <div id="Additional-info">
+            <!-- children div  -->
+           <div class="A-info">
+            <a href="https://www.worldhalalfoodfestival.com/tickets">Tickets</a>
+           </div>
+           <div class="A-info">
+            <a href="https://www.worldhalalfoodfestival.com/apply-to-trade">Exhibit With Us</a></div>
+           <div class="A-info">
+            <a href="https://www.worldhalalfoodfestival.com/influencer">Influencer Registration</a></div>
+           <div class="A-info"> <a href="https://www.worldhalalfoodfestival.com/getting-here">Getting here</a></div>
+           <div class="A-info"> <a href="https://www.worldhalalfoodfestival.com/faq">FAQs</a></div>
+        
+        
+         </div>
+    </section>
+
+
+ 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.facebook.com/worldhalalfoodfestival/?locale=en_GB">
+                    <img src="./images/icon-facebook.svg" alt="facebook icon" height="32">
+                </a>
+                <a href="https://www.tiktok.com/@worldhalalfoodfestival">
+                    <img src="./images/tiktok.svg" alt="TikTok icon" height="32"> 
+                </a>
+                <a href="https://www.instagram.com/worldhalalfoodfestival/?hl=en">
+                    <img src="./images/icon-instagram.svg" alt="instagram icon" height="32">
+                </a>
+            </div>
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+ 
+    <!-- Cookie Popup -->
+    <div id="cookie-popup" class="cookie-popup">
+        <p>This website uses cookies to ensure you get the best experience.
+            <a href="#">Learn More</a>
+        </p>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+ 
+    <script src="scripts.js"></script>
+</body>
+ 
+</html>

@@ -1,0 +1,492 @@
+/* CSS General reset */
+* /* CSS General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* Variables */
+:root {
+  /* Colors */
+  --color-primary: black;
+  --color-secondary: white;
+  --color-cta: white;
+  --color-cta-bg: #c73a6e; 
+  --color-bg: white;
+  --color-bg-nav: #ee8133;
+  --color-headings: black;
+  --color-body-text:black;
+  --color-shadow:grey;
+  --color-gradient:   linear-gradient(90deg, rgba(199,58,110,1) 29%, rgba(255,109,42,1) 97%);
+  --color-semitransparent: rgb (0, 0,0,0.5)
+ 
+  
+
+  /* Fonts */
+  --font-headings: "Montserrat", sans-serif; 
+  --font-body-text: "Montserrat", sans-serif;
+ 
+  /* Spacing */
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-x-lg: 40px;
+  --spacing-xx-lg: 50px;
+}
+ 
+html {
+  /* Set root font-size for rem to 62.5% to change the font-size default value to 10px. */
+  font-size: 62.5%;
+}
+ 
+/* General styles */
+body {
+  font-family: var(--font-headings);
+  line-height: 1.6;
+ 
+  /* 1rem = 10px */
+  font-size: 1.6rem;
+}
+
+/* typography- mobile  */
+h1 {
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: -0.0625rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.125rem;
+  line-height: 1.067rem;
+  letter-spacing: -0.05rem;
+  font-weight: bold;
+
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.083rem;
+  letter-spacing: -0.0375;
+  font-weight: bold;
+}
+
+p, span, b, i, strong, em, a, li {
+  font-size: 1.2rem;
+}
+
+button {
+  font-size: 1.35rem;
+}
+ 
+/* Navigation bar */
+header {
+  background: var(--color-gradient);
+  padding: var(--spacing-sm);
+}
+ 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-secondary);
+}
+ 
+.logo {
+  font-size: 1.5rem;
+
+}
+
+
+
+.menu {
+  /* Hidden on mobile devices */
+  display: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding-right: var(--spacing-md);
+}
+
+.menu a:hover {
+  color: var(--color-cta);
+  font-weight: bold;
+
+}
+
+ 
+.burger-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  /* Display on mobile devices */
+  display: block;
+}
+ 
+.mobile-menu {
+  display: none;
+  background-color: var(--color-cta-bg);
+  padding: var(--spacing-sm);
+  position: absolute;
+  top: var(--spacing-xx-lg);
+  width: 100%;
+  z-index: 1;
+}
+ 
+.mobile-menu a {
+  display: block;
+  color: var(--color-secondary);
+  padding: var(--spacing-sm);
+  text-decoration: none;
+}
+ 
+/* Hero section */
+#hero {
+  position: relative;
+  text-align: center;
+}
+ 
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.hero-image-logo {
+  width: 100%;
+  height: auto;
+  background: rgba(245, 245, 245, 0.788);
+  padding: 20px;
+
+}
+ 
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  
+}
+ 
+.cta-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-cta);
+  color: var(--color-cta-bg);
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border: 1px solid var(--color-gradient)
+
+}
+ 
+/* Sections */
+section {
+  padding: var(--spacing-x-lg) var(--spacing-md);
+  text-align: center;
+}
+ 
+.web-cards {
+  display: flex;
+  /* Stacks cards vertically on mobile */
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+ 
+.card {
+  background: var(--color-gradient);
+  flex-basis: 100%;
+
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  color: white;
+  background-color:var(--color-semitransparent);
+  box-shadow: var(--color-shadow);
+  margin: 2rem;
+}
+
+.card img {
+  max-width:30rem;
+  border-radius: 2rem 2rem 0 0;
+  -webkit-border-radius: 2rem 2rem 0 0;
+  -moz-border-radius: 2rem 2rem 0 0;
+  -ms-border-radius: 2rem 2rem 0 0;
+  -o-border-radius: 2rem 2rem 0 0;
+
+  display: block;
+  max-width: 100%;
+}
+
+.info {
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+ 
+.small-card {
+  flex: 1;
+}
+ 
+.large-card {
+  flex: 2;
+}
+ 
+/* Footer */
+footer {
+  background: var(--color-gradient);
+  color: var(--color-secondary);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+ 
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+ 
+.social-media img {
+  margin-right: var(--spacing-sm);
+  filter:invert(100%) ;
+  -webkit-filter:invert(100%) ;
+}
+ 
+/* Cookie Popup */
+.cookie-popup {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--color-bg-nav);
+  color: var(--color-secondary);
+  width: 100%;
+  padding: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.cookie-popup button {
+  padding: var(--spacing-sm);
+  background-color: var(--color-cta);
+  color: var(--color-cta-bg);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+ 
+/* * Carousel  */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+   
+  .carousel-slide {
+    display: flex;
+  }
+   
+  .carousel-slide img {
+    width: 100%;
+    display: none;
+  }
+   
+  .carousel-slide img.active {
+    display: block;
+  }
+   
+  .carousel-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+  }
+   
+  .carousel-navigation .prev,
+  .next {
+    color: #ff6d2a;
+  }
+   
+  .carousel-navigation button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+  }
+   
+  .carousel-bullets .bullet {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #ff6d2a;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+  }
+   
+  .carousel-bullets .bullet.active {
+      background-color: #c73a6e;
+  }
+
+.contact a {
+  text-decoration:none;
+  color: #ee8133;
+  padding-right: var(--spacing-md);
+
+}
+
+.contact a:hover {
+  color: var(--color-bg-nav);
+  font-weight: bold;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+  .video-wrapper{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  /* tickets selection flexbox  */
+#Additional-info{
+  display: flex;
+  justify-content:center;
+  justify-content: space-around;
+  align-items: flex-end;  
+  align-items: stretch;
+}
+
+.A-info{
+  background-color:var(--color-cta-bg);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 1%;
+  border-color: var(--color-cta-bg);
+}
+
+.A-info a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+.A-info a:hover {
+  color:var(--color-secondary);
+  font-weight: bold;
+}
+
+/* Responsive styles */
+/* Media query -tablets and desktops */
+@media (min-width: 768px) {
+  .menu {
+    display: block;
+  }
+ 
+  .burger-menu {
+    /* Hidden on tablet and desktop */
+    display: none;
+  }
+ 
+  .mobile-menu {
+    display: none;
+  }
+ 
+  .web-cards {
+    /* Horizontal layout on larger screens */
+    flex-direction: row;
+  }
+ 
+  .card {
+    max-width: 30%;
+  }
+
+  /* typography- tablet and desktop */
+h1 {
+  font-size: 2.125em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size:1.25ren ;
+  line-height: 1.1;
+  letter-spacing: -0.025rem;
+  font-weight: bold;
+}
+
+
+h5 {
+  font-size: 1.25rem;
+  line-height:1.111 ;
+  letter-spacing:-1.0125rem ;
+  font-weight: bold;
+}
+
+h6{
+  font-size: 1rem;
+  line-height: 1.125;
+  letter-spacing: 0.00625rem;
+  font-weight: bold;
+
+}
+
+
+
+p, span, b, i, strong, em, a, li {
+  font-size: 1.2rem;
+}
+
+button {
+  font-size: 1.35rem;
+}
+}
+
+
+
