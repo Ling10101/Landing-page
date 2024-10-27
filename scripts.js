@@ -60,3 +60,22 @@ function autoSlide() {
 }
 
 setInterval(autoSlide, 2000);
+
+
+// JavaScript for testimonial slider
+let currentIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial');
+const totalTestimonials = testimonials.length;
+
+function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+        testimonial.classList.toggle('active', i === index);
+    });
+}
+
+
+//: Auto-rotate testimonials every 5 seconds
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalTestimonials;
+    showTestimonial(currentIndex);
+}, 5000);

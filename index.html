@@ -57,7 +57,9 @@
                 <a href="#section1">Home</a>
                 <a href="#section2">About</a>
                 <a href="#section3">What's on</a>
-                <a href="#section4">Contact</a>
+                <a href="#section4">Featured Vendors</a>
+                <a href="#section5">Contact</a>
+
             </div>
             <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
         </nav>
@@ -65,7 +67,8 @@
             <a href="#section1" onclick="closeMenu()">Home</a>
             <a href="#section2" onclick="closeMenu()">About</a>
             <a href="#section3" onclick="closeMenu()">What's on</a>
-            <a href="#section4" onclick="closeMenu()">Contact</a>
+            <a href="#section4" onclick="closeMenu()">Featured Vendors</a>
+            <a href="#section5" onclick="closeMenu()">Contact</a>
         </div>
     </header>
  
@@ -157,6 +160,60 @@
             </div>
         </div>
     </section>
+
+    <section id="section4" class="contact a">
+        
+        <h2>Featured vendors</h2>
+    <br>
+        <p><em>A preview of the unique brands bringing style and elegance to the festival.</em></p>
+        <br>
+           <p> Discover the best in halal living with our featured selection of vendors. These brands are known for their dedication to quality, offering everything from elegant home décor to exclusive wellness products. Each brand has something special to offer, giving you a taste of what's in store at the World Halal Food Festival. Scroll through our selected collection below and be inspired by the finest in halal lifestyle!</p>
+            <br>
+        
+        <div class="vendor-card-container">
+            
+            <div class="vendor-cards">
+                <a href="https://nuhrhome.com/" class="vendors">
+                    <img src="./images/NUHR-Home-Accessories.webp" alt="Oud Incense cone wood burner">
+                    <div class="vendor-brand">
+                        <img src="./images/NUHR-Logo-Gold.avif" alt="nimah jewellery">
+                    </div>
+                </a>
+                
+            </div>
+            <div class="vendor-cards">
+                
+                <a href="https://nimahlondon.com/" class="vendors">
+                    <img src="./images/nimah-jewellery.webp" alt="Oud Incense cone wood burner">
+                    <div class="vendor-brand">
+                        <img src="./images/nimah-logo.avif" alt="nimah logo">
+                    </div>
+                </a> 
+                
+            </div>
+            <div class="vendor-cards">
+                
+                <a href="https://faithfuel.co.uk/" class="vendors" >
+                    <img src="./images/faithful-collagen.webp" alt="halal collagen">
+                    <div class="vendor-brand">
+                        <img src="./images/faithfulfuel-logo.avif" alt="faithfulfuel">
+                    </div>
+                </a>
+            </div>
+
+        <div class="vendor-cards">
+
+           <a href="https://thobeluxe.com/" class="vendors">
+               <img src="./images/Thobe.webp" alt="Children's thobe">
+               <div class="vendor-brand">
+                   <img src="./images/THOBELUXE_LOGO_small.webp" alt="thobeluxe">
+               </div>
+           </a>
+            
+        </div>
+    </div>
+
+    </section>
  
     
     <!-- video  -->
@@ -166,15 +223,13 @@
 
      </div>
 
-    <section id="section4" class="contact a">
+    <section id="section5" class="contact a">
         
         <a href="https://www.worldhalalfoodfestival.com/contact"> Contact Us </a>
 
     </section>
 
-    <section>
-
-        <!-- parent div  -->
+    <section> <!-- parent div  -->
          <div id="additional-info">
             <!-- children div  -->
            <div class="a-info">
@@ -191,7 +246,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-container">
             <div class="social-media">
                 <a href="https://www.facebook.com/worldhalalfoodfestival/?locale=en_GB">
                     <img src="./images/icon-facebook.svg" alt="facebook icon" height="32">
@@ -203,11 +258,36 @@
                     <img src="./images/icon-instagram.svg" alt="instagram icon" height="32">
                 </a>
             </div>
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <div class="testimonial-section">
+                <h3>What People Are Saying</h3>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>I had such a fun day and I would most definitely recommend 👍🏻👍🏻 </p>
+                            <cite>Sheinaz</cite>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>Marshallah a beautiful day well organised brilliant atmosphere 👏  awesome to see so many muslim business owners in the UK and so many brothers and sister who came out to support the festival...delicious food value for money great day out for families well done 👏</p>
+                            <cite>Saira</cite>
+                        </blockquote>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>A lovely event to attend with friends. There are great good options and a bonus of live entertainment to sit down and enjoy. There are a wide variety of cuisines to choose from and queues, although appearing long, move quickly. I would definitely go again!</p>
+                            <cite>DK</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div> 
+            <div class="rights">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
         </div>
     </footer>
- 
-    <!-- Cookie Popup -->
+
+     <!-- cookie pop up --> 
     <div id="cookie-popup" class="cookie-popup">
         <p>This website uses cookies to ensure you get the best experience.
             <a href="#">Learn More</a>

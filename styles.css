@@ -35,7 +35,7 @@
  
 html {
   /* Set root font-size for rem to 62.5% to change the font-size default value to 10px. */
-  font-size: 80%;
+  font-size: 90%;
 }
  
 /* General styles */
@@ -209,7 +209,6 @@ section {
 }
 
 .card img {
-  max-width:30rem;
   border-radius: 2rem 2rem 0 0;
   -webkit-border-radius: 2rem 2rem 0 0;
   -moz-border-radius: 2rem 2rem 0 0;
@@ -217,42 +216,179 @@ section {
   -o-border-radius: 2rem 2rem 0 0;
   display: block;
   max-width: 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .info {
   text-align: left;
   padding: 1rem 2rem;
 }
- 
-.small-card {
-  flex: 1;
+
+
+/* Container that holds all cards */
+.vendor-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  /*Allows the cards to wrap to the next line if necessary*/
+  gap: 40px;
+  /*Adds space between the cards*/
+  justify-content: center; 
+}
+
+.vendor-cards {
+  flex: 1 1 250px;
+  max-width: 250px;
+  min-height: 350px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-cta-bg);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .vendor-card-container {
+      flex-direction: column;  /* Stack the cards vertically on smaller screens */
+      align-items: center;
+    
+  }
+}
+
+.vendors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 300px;  
+}
+
+.vendors img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  margin: 8px;
+}
+
+.vendor-brand{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vendor-brand img{
+  width: 80%;
+  max-height: 150px;
+  max-width: 100px;
+  height: auto;
+  margin-top: 8px;
+  object-fit: contain;
+  overflow: hidden;
 }
  
-.large-card {
-  flex: 2;
-}
- 
-/* Footer */
-footer {
+ /* Footer */
+ footer {
   background: var(--color-gradient);
   color: var(--color-secondary);
   padding: var(--spacing-md);
-  text-align: center;
+  min-height: 215px;
 }
  
-.footer-content {
+.footer-container{
   display: flex;
-  justify-content: space-between;
+  
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows boxes to wrap when the screen gets smaller */
+  flex-direction: column;
 }
- 
+
+.testimonial-section {
+  text-align: center; /* Center text */
+}
+
+.social-media {
+  align-self: flex-end;
+  min-width: 80px;
+}
+
+.rights {
+  align-self: flex-end;
+  min-width: 80px;
+}
+
 .social-media img {
   margin-right: var(--spacing-sm);
   filter:invert(100%) ;
   -webkit-filter:invert(100%) ;
 }
- 
+
+.social-media a {
+  text-decoration: none;
+}
+
+.testimonial-slider {
+  height: 120px;
+  overflow: hidden; /* Hide overflow */
+  width: 100%;
+  position: relative;
+}
+
+.testimonial {
+  height: 100%;
+  display: none; /* Hide all testimonials by default */
+}
+
+.testimonial.active {
+  display: block; /* Show the active testimonial */
+}
+
+
+
+/* Responsive Text Size for Testimonial */
+@media (max-width: 600px) {
+  .testimonial p {
+    font-size: 0.85rem; /* Adjust font size on smaller screens */
+    overflow: hidden;
+  } 
+
+  .rights p {
+    font-size: 0.85rem;
+  }
+
+  .footer-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items */
+  }
+
+  .testimonial-section {
+      width: 100%; /* Full width on small screens */
+  }
+
+  .social-media,
+  .rights {
+      flex-grow: 1; /* Allow even growth */
+      width: 100%; /* Full width on smaller screens */
+      min-width: unset; /* Remove min-width for responsiveness */
+  }
+}
+
+
+
+
+
 /* Cookie Popup */
 .cookie-popup {
   position: fixed;
@@ -278,6 +414,27 @@ footer {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
+.cookie-popup-container {
+  display: flex;
+  justify-content: center;  /* Center the pop-up horizontally */
+  align-items: center;      /* Center the pop-up vertically */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;  /* Ensure the pop-up is above other elements */
+}
+
+.cookie-popup {
+  max-width: 100%;         /* Set a maximum width for the pop-up */
+  max-height: 100%;         /* Limit height to 90% of the viewport*/
+  overflow-y: auto;         /* Enable scrolling if the content exceeds the height */
+  padding: 1.5rem;
+  
+}
+
  
 /* * Carousel  */
 .carousel-container {
@@ -368,6 +525,7 @@ footer {
     
   }
 
+
   /* tickets selection flexbox  */
 #additional-info{
   display: flex;
@@ -396,7 +554,6 @@ footer {
   text-decoration: none;
   color: var(--color-secondary);
   position: relative;
-  z-index: 1;
   transition:font-weight 0.3s ease;
   -webkit-transition:font-weight 0.3s ease;
   -moz-transition:font-weight 0.3s ease;
@@ -431,12 +588,14 @@ footer {
   #additional-info {
     flex-direction: column; /* Stack the boxes vertically on small screens */
     justify-content: center; /* Center them vertically */
+    align-items: center;
   }
 
   .a-info {
-    width: 100%; /* Ensure the boxes take up full width in the column layout */
+    width: 50%; /* Ensure the boxes take up full width in the column layout */
   }
-}
+
+  }
 
 /* Responsive styles */
 /* Media query -tablets and desktops */
@@ -457,6 +616,7 @@ footer {
   .web-cards {
     /* Horizontal layout on larger screens */
     flex-direction: row;
+    align-items: stretch;
   }
  
   .card {
