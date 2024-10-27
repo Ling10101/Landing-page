@@ -304,12 +304,11 @@ section {
   background: var(--color-gradient);
   color: var(--color-secondary);
   padding: var(--spacing-md);
-  min-height: 215px;
+  min-height: 220px;
 }
  
 .footer-container{
   display: flex;
-  
   align-items: center;
   flex-wrap: wrap; /* Allows boxes to wrap when the screen gets smaller */
   flex-direction: column;
